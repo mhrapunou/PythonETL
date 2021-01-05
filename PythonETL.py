@@ -1,6 +1,4 @@
 import pandas as pd
-import matplotlib.pyplot as plt
-
 
 flights = pd.read_csv('flights.csv', parse_dates=['date']).loc[lambda df: df['date'] >= '2020-Apr']
 users = pd.read_csv('users.csv', index_col='code').loc[lambda df: (df['gender'] == 'female') & (df['age'] > 35)]
